@@ -33,7 +33,6 @@ public class Exercicio1 {
         } while (existeErro);
 
         saque(saldo);
-
     }
 
     private static void isUserNameValid(String userName) throws IllegalArgumentException {
