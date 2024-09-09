@@ -1,7 +1,6 @@
 package br.com.poo.aula5;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class ExercicioCep {
@@ -14,7 +13,7 @@ public class ExercicioCep {
         imprimirLogradouro(mapCep);
         verificaCep(mapCep, "88138-154");
         verificaCep(mapCep, "88138-100");
-        mapCep.remove("88138-100");
+        remaverCep(mapCep, "88138-130");
         exibirCepLogradouro(mapCep);
 
     }
@@ -57,6 +56,15 @@ public class ExercicioCep {
         mapa.forEach((k, v) -> {
             System.out.println(k + " : " + v);
         });
+    }
+
+    public static void remaverCep(Map<String, String> mapa, String cep) {
+        if (isCepExiste(mapa, cep)){
+            mapa.remove(cep);
+            System.out.println("Cep removido.");
+        }else {
+            System.out.println("O cep informado não existe.");
+        }
     }
 
     public static HashMap<String, String> test(Map<String, String> mapa) {
